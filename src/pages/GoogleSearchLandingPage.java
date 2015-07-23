@@ -43,7 +43,7 @@ public class GoogleSearchLandingPage {
 	//To verify by text of the link
 	public Boolean verifyByLinkText(String linkText) {
 		this.waitForTime(3000);
-		return this.driver.findElement(By.linkText(linkText)).isDisplayed();
+		return this.driver.findElements(By.linkText(linkText)).size()>0;
 		
 	}
 	
